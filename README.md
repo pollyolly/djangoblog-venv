@@ -42,6 +42,9 @@ Change SSL REDIRECT in djangoblog/settings.py
 SECURE_SSL_REDIRECT = False
 ```
 ```
-$djangoblog-venv
-$python manage.py runserver <custom_non_conflict_port i.e. 8888>
+$cd djangoblog-venv/
+$python manage.py runserver <custom_non_conflict_port i.e. 8000>
+```
+```
+http://127.0.0.1:8000/
 ```
