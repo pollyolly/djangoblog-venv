@@ -1,23 +1,47 @@
-### Heroku Requirements
+### Create Virtual Environment
 ```
-Procfile
-requirements.txt ($pipenv run pip freeze > requirements.txt)
-runtime.txt
-
+$python3 -m venv djangoblog-venv
+$cp -r djangoblog/* djangoblog-venv/
+$cd djangoblog-venv/bin/
+$source activate
+$(djangoblog-venv) user@computer djangoblog-venv %
+$deactivate
 ```
-### FrontEnd
+### Install Requirements
+If conflicting remove package in requirements.txt and install using $pip install <package_name_only>
 ```
-- getbootstrap: https://getbootstrap.com/docs/5.1/examples/album/
+$pip install -r requirements.txt #Install in Venv and in Main Project
 ```
-### Deployment
-[Django Deployment](https://github.com/pollyolly/DJANGO-NOTE)
-
-### Tutorials
-[django-auto-logout](https://pypi.org/project/django-auto-logout/)
-
-[best-free-wysiwyg-editor-python-django-admin-panel-integration](https://blog.devgenius.io/best-free-wysiwyg-editor-python-django-admin-panel-integration-d9cb30da1dba)
-
-[customize-django-admin-python](https://realpython.com/customize-django-admin-python/)
-
-[django-admin-cookbook](https://books.agiliq.com/projects/django-admin-cookbook/en/latest/export.html)
-
+### List Requirements
+```
+$pip freeze > requirements.txt
+```
+### Collect Static
+```
+$python manage.py collectstatic
+```
+### Check Deployment
+```
+$python manage.py check --deploy
+```
+### Install Django Libraries
+```
+$pip install django
+$pip install channels
+$pip install django-jazzmin
+$pip install django-import-export
+$pip install django-tinymce
+$pip install django-debug-toolbar
+$pip install pillow
+$pip install whitenoise
+$pip install django-auto-logout
+```
+### Run in Local Server
+Change SSL REDIRECT in djangoblog/settings.py
+```
+SECURE_SSL_REDIRECT = False
+```
+```
+$djangoblog-venv
+$python manage.py runserver <custom_non_conflict_port i.e. 8888>
+```
