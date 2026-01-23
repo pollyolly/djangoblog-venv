@@ -1,6 +1,3 @@
-### Djangoblog
-[Original Project](https://github.com/pollyolly/djangoblog)
-
 ### Create Virtual Environment
 ```
 $python3 -m venv djangoblog-venv

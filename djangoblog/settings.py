@@ -26,7 +26,7 @@ SECRET_KEY = '185006c02c8f3b5c027484e9c5343983d26a6055e679e68719a09134f0f15be1d1
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*','127.0.0.1'] #to read by nginx
+ALLOWED_HOSTS = ['*','127.0.0.1','.wasmer.app'] #to read by nginx
 CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1','https://localhost']
 #CORS_ORIGIN_ALLOW_ALL = True
 
@@ -56,7 +56,6 @@ INSTALLED_APPS = [
     'chat',
     'register'
     #'admin_reorder'
-
 ]
 
 ASGI_APPLICATION = 'djangoblog.asgi.application'
