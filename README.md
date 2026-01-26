@@ -21,7 +21,7 @@ $pip freeze > requirements.txt
 ```
 ### Collect Static
 ```
-$python manage.py collectstatic
+$python manage.py collectstatic --no-input
 ```
 ### Check Deployment
 ```
